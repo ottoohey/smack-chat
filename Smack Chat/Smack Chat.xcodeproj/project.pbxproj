@@ -13,6 +13,7 @@
 		A7FE7FD8201D8BA800BA1B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE7FD6201D8BA800BA1B15 /* Main.storyboard */; };
 		A7FE7FDA201D8BA800BA1B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FE7FD9201D8BA800BA1B15 /* Assets.xcassets */; };
 		A7FE7FDD201D8BA800BA1B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE7FDB201D8BA800BA1B15 /* LaunchScreen.storyboard */; };
+		A7FE7FE8201D9BFB00BA1B15 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FE7FE7201D9BFB00BA1B15 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		A7FE7FD9201D8BA800BA1B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7FE7FDC201D8BA800BA1B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7FE7FDE201D8BA800BA1B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FE7FE5201D9BFA00BA1B15 /* Smack Chat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack Chat-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7FE7FE6201D9BFB00BA1B15 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		A7FE7FE7201D9BFB00BA1B15 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		A7FE7FD1201D8BA800BA1B15 /* Smack Chat */ = {
 			isa = PBXGroup;
 			children = (
+				A7FE7FE4201D9BD600BA1B15 /* Supporting Files */,
 				A7FE7FD2201D8BA800BA1B15 /* AppDelegate.swift */,
 				A7FE7FD4201D8BA800BA1B15 /* ViewController.swift */,
 				A7FE7FD6201D8BA800BA1B15 /* Main.storyboard */,
@@ -78,6 +83,16 @@
 				A7FE7FDE201D8BA800BA1B15 /* Info.plist */,
 			);
 			path = "Smack Chat";
+			sourceTree = "<group>";
+		};
+		A7FE7FE4201D9BD600BA1B15 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7FE7FE6201D9BFB00BA1B15 /* SWRevealViewController.h */,
+				A7FE7FE7201D9BFB00BA1B15 /* SWRevealViewController.m */,
+				A7FE7FE5201D9BFA00BA1B15 /* Smack Chat-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D8A86F33CBA6C3634CBA20E8 /* Frameworks */ = {
@@ -123,6 +138,7 @@
 				TargetAttributes = {
 					A7FE7FCE201D8BA800BA1B15 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -225,6 +241,7 @@
 			files = (
 				A7FE7FD5201D8BA800BA1B15 /* ViewController.swift in Sources */,
 				A7FE7FD3201D8BA800BA1B15 /* AppDelegate.swift in Sources */,
+				A7FE7FE8201D9BFB00BA1B15 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,11 +379,14 @@
 			baseConfigurationReference = 33238A9D1EE397725067EB30 /* Pods-Smack Chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Smack Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ottoohey.Smack-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smack Chat/Supporting Files/Smack Chat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,11 +397,13 @@
 			baseConfigurationReference = 0DCE588154CBF40CBEFE74D0 /* Pods-Smack Chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Smack Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ottoohey.Smack-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smack Chat/Supporting Files/Smack Chat-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
